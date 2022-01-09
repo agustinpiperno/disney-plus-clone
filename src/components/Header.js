@@ -40,6 +40,9 @@ function Header() {
             }))
             history.push('/') 
         })
+        .catch(error => {
+            alert(error.message);
+         });
     }
 
     const signOut = () => {
@@ -48,6 +51,7 @@ function Header() {
             dispatch(setSignOut());
             history.push("/login")
         })
+        .catch(err => alert(err.message));
     }
 
     return (
